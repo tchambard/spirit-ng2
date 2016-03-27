@@ -14,7 +14,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
  * Get npm lifecycle event to identify the environment
  */
 var ENV = process.env.npm_lifecycle_event;
-
+console.error("ENV:",ENV);
 module.exports = function makeWebpackConfig() {
   /**
    * Config
@@ -129,7 +129,11 @@ module.exports = function makeWebpackConfig() {
 
       // support for .html as raw text
       // todo: change the loader to something that adds a hash to images
-      {test: /\.html$/, loader: 'raw'}
+      {test: /\.html$/, loader: 'raw'},
+      
+      // support for boostrap
+      { test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports?jQuery=jquery' },
+
     ],
     postLoaders: [],
     noParse: [/.+zone\.js\/dist\/.+/, /.+angular2\/bundles\/.+/, /angular2-polyfills\.js/]
@@ -145,8 +149,7 @@ module.exports = function makeWebpackConfig() {
     })
   }
 
-  /**
-   * Plugins
+   /* Plugins
    * Reference: http://webpack.github.io/docs/configuration.html#plugins
    * List: http://webpack.github.io/docs/list-of-plugins.html
    */
@@ -159,6 +162,8 @@ module.exports = function makeWebpackConfig() {
         ENV: JSON.stringify(ENV)
       }
     })
+    
+    
   ];
 
 

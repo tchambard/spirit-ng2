@@ -5,14 +5,14 @@ import {
   inject,
   beforeEachProviders
 } from 'angular2/testing';
-import {Api} from './api';
+import { Users } from '../../services/api/users';
 
 describe('Api Service', () => {
 
-  beforeEachProviders(() => [Api]);
+  beforeEachProviders(() => [Users]);
 
-  it('should ...', inject([Api], (api:Api) => {
-    expect(api.title).toBe('Angular 2');
+  it('should ...', inject([Users], (users:Users) => {
+    expect(users.apiUrl).toBe('http://localhost:3000/api');
   }));
 
 });

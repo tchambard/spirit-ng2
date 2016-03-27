@@ -1,0 +1,31 @@
+<div class="lockscreen" style="height: 100%">
+  <div class="form-box" id="login-box">
+        <span class="pull-right image" style="margin: 15px 20px; float: left;">
+            <img gravatar-src="credentials.email" class="img-circle" alt="User Image" gravatar-size="50">
+        </span>
+
+    <div class="header" style="text-align: left; padding-left: 25px;" translate>Sign In</div>
+    <form role="form" (submit)="login($event, username.value, password.value)">
+      <div class="body bg-gray">
+        <div class="form-group">
+		  <label for="username">Username</label>
+		  <input type="text" #username class="form-control" id="username" placeholder="Username">
+		</div>
+		<div class="form-group">
+		  <label for="password">Password</label>
+		  <input type="password" #password class="form-control" id="password" placeholder="Password">
+		</div>
+      </div>
+      <div class="footer">
+        <button type="submit" class="btn bg-olive btn-block" translate>Sign in</button>
+        <a href='#/register' class="btn bg-yellow btn-block" translate>Or register</a>
+        <!--
+        <a ng-repeat="provider in authProviders" ng-hide="provider.link" ng-click="socialLogin(provider)"
+           class="btn btn-block btn-{{provider.class}}">
+          {{provider.provider | ucfirst}}
+        </a>
+        -->
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,86 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+body {
+	background-attachment: fixed;
+	background-size: 100% auto;
+}
+
+.container {
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-left: initial;}
+
+.blended_grid {
+	display: block;
+	float: left;
+	overflow: auto;
+	margin: 0 auto;
+}
+
+.pageHeader {
+	background-color: rgba(0, 0, 0, 0.5);
+	float: left;
+	clear: none;
+	height: 400px;
+	width: 1200px;
+}
+
+.pageBarLeft {
+	float: left;
+	clear: none;
+	min-width: 80px;
+	min-height: 80px;
+}
+
+.pageBarLeft .card{
+	margin-top: 20px;
+	float: none;
+	clear: both;
+	width: 300px;
+}
+
+.pageContent {
+	float: left;
+	clear: none;
+	height: 1000px;
+	width: 600px;
+}
+
+.pageBarRight {
+	float: left;
+	clear: none;
+	min-width: 80px;
+	min-height: 80px;
+}
+
+.pageBarRight .card{
+	margin-top: 20px;
+	float: none;
+	clear: both;
+	width: 300px;
+}
+
+.pageRightTop {
+	float: none;
+	clear: both;
+	height: 300px;
+	width: 300px;
+}
+
+.pageRightMid {
+	float: none;
+	clear: both;
+	height: 300px;
+	width: 300px;
+}
+
+.pageRightBottom {
+	float: none;
+	clear: both;
+	height: 300px;
+	width: 300px;
+}

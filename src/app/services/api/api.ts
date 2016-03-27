@@ -1,6 +1,7 @@
-import {Injectable} from 'angular2/core';
+import {CONST_EXPR} from 'angular2/src/facade/lang';
 
-@Injectable()
-export class Api {
-  title: string = 'Angular 2';
-}
+import {Users} from './users';
+
+
+// Expose the whole API through API_PROVIDERS
+export const API_PROVIDERS: any[] = CONST_EXPR([Users]);
