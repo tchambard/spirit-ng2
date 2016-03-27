@@ -89,7 +89,7 @@
         				<li role="separator" class="divider"></li>
         				<li><a [routerLink]="['Pricing']">Your profile</a></li>
   						<li role="separator" class="divider"></li>
-						<li><a href="#" class="dropdown-item" (click)="logout()">Sign out</a></li>
+						<li><a [routerLink]="['Home']" class="dropdown-item" (click)="logout()">Sign out</a></li>
 					</ul>
                 </li>
                 <li *ngIf="!getUserProfile()">
