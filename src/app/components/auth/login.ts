@@ -22,7 +22,7 @@ export class Login {
           this._service.userProfile(res.userId).subscribe(
         	up => {
         		localStorage.setItem('userProfile', JSON.stringify(up));
-        		this.router.parent.navigateByUrl('/dashboard');
+        		this.router.parent.navigateByUrl('/team');
         	},
         	err => {
         	    console.error(err.message);

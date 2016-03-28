@@ -1,0 +1,11 @@
+/* The company logo */
+
+.logo {
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+.logo span {
+	color:  #66C166;
+}

@@ -1,0 +1,29 @@
+
+<aside class="sidebar-left">
+
+	<div class="sidebar-links">
+		<a class="link-blue" href="#"><i class="fa fa-picture-o"></i>Photography</a>
+		<a class="link-red" href="#"><i class="fa fa-heart-o"></i>Favorites</a>
+		<a class="link-yellow selected" href="#"><i class="fa fa-keyboard-o"></i>Projects</a>
+		<a class="link-green" href="#"><i class="fa fa-map-marker"></i>Places</a>
+	
+	
+	</div>
+
+</aside>
+
+<script>
+
+	$(function () {
+
+		var links = $('.sidebar-links > a');
+
+		links.on('click', function () {
+
+			links.removeClass('selected');
+			$(this).addClass('selected');
+
+		})
+	});
+
+</script>

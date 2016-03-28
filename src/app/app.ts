@@ -3,10 +3,9 @@ import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 import {FORM_PROVIDERS} from 'angular2/common';
 
 // styles
-import '../style/modern-business.css';
-import '../style/spirit-auth.css';
-import '../style/spirit-container.css';
-import '../style/spirit-elements.css';
+import '../style/global.css';
+import './app.css';
+import './container.css';
 
 
 import {API_PROVIDERS} from './services/api/api';
@@ -38,7 +37,7 @@ import {SidebarComponent} from './components/site/sidebar';
 import {Auth} from './components/auth/auth';
 
 // Applicative components
-import {DashboardComponent} from './components/site/dashboard';
+import {Team} from './components/team/team';
 
 
 
@@ -74,7 +73,9 @@ import {DashboardComponent} from './components/site/dashboard';
   {path: '/pricing', name: 'Pricing', component: PricingComponent},
   {path: '/services', name: 'Services', component: ServicesComponent},
   {path: '/sidebar', name: 'Sidebar', component: SidebarComponent},
-  {path: '/dashboard', name: 'Dashboard', component: DashboardComponent}
+  
+  // Team
+  {path: '/team', name: 'Team', component: Team}
 ])
 
 export class App {
